@@ -1,0 +1,16 @@
+{
+  "name": "remote-sandbox-probe",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Remote Sandbox Probe - static page showing UTC time, build version and GitHub repo stats",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.4.8"
+  }
+}

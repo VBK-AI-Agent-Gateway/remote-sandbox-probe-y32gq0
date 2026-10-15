@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Remote Sandbox Probe - shows UTC time, build version and GitHub repository stats." />
+  <title>Remote Sandbox Probe</title>
+  <script type="module" src="/src/main.ts"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <h1 id="page-title">Remote Sandbox Probe</h1>
+      <div class="topbar-actions">
+        <button id="theme-toggle" class="btn" type="button" aria-label="Toggle theme">🌙 暗色</button>
+        <button id="refresh-btn" class="btn primary" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="clock-card">
+        <h2>UTC 时间（每秒刷新）</h2>
+        <div class="clock" id="utc-clock">--</div>
+        <div class="sub" id="utc-iso">—</div>
+      </section>
+
+      <section class="card" id="version-card">
+        <h2>构建信息 <span class="tag">./version.json</span></h2>
+        <div class="kv"><span class="k">Commit SHA</span><span class="v mono" id="ver-sha">—</span></div>
+        <div class="kv"><span class="k">Build time</span><span class="v mono" id="ver-time">—</span></div>
+        <div class="err hidden" id="ver-err"></div>
+      </section>
+
+      <section class="card" id="repo-card">
+        <h2>仓库信息 <span class="tag">GitHub API</span></h2>
+        <div class="kv"><span class="k">仓库全名</span><span class="v mono" id="repo-name">—</span></div>
+        <div class="kv"><span class="k">Stars</span><span class="v mono" id="repo-stars">—</span></div>
+        <div class="kv"><span class="k">Forks</span><span class="v mono" id="repo-forks">—</span></div>
+        <div class="kv"><span class="k">最近 commit</span><span class="v" id="repo-commit">—</span></div>
+        <div class="err hidden" id="repo-err"></div>
+      </section>
+
+      <section class="card" id="status-card">
+        <h2>状态</h2>
+        <div class="kv"><span class="k">最近刷新</span><span class="v mono" id="last-refresh">—</span></div>
+        <div class="kv"><span class="k">API 结果</span><span class="v" id="api-status">—</span></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>静态页 · Vite + TypeScript · GitHub Pages</span>
+      <span class="mono" id="foot-note">loading…</span>
+    </footer>
+  </div>
+</body>
+</html>
