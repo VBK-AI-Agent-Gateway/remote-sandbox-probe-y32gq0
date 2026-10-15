@@ -16,12 +16,12 @@
 
 （push 后由 CI 部署，见下方 Pages URL；本 README 在首次 push 前占位）
 
-- 仓库：<REPO_URL_PLACEHOLDER>
-- Commit：<COMMIT_PLACEHOLDER>
+- 仓库：https://github.com/VBK-AI-Agent-Gateway/remote-sandbox-probe-y32gq0
+- Commit：3e0072605c2e85a44206cc16a36f745df4e6cbf7
 
 ## GitHub Pages URL
 
-<PAGES_URL_PLACEHOLDER>
+https://vbk-ai-agent-gateway.github.io/remote-sandbox-probe-y32gq0/
 
 > 首次启用 Pages 后可能短暂 404，需等待 Actions `Deploy to GitHub Pages` 运行成功（通常 1–2 分钟）。
 
